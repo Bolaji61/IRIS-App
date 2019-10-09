@@ -1,4 +1,4 @@
 # IRIS-App
 
-Practice on how to deploy a machine learning model to the web and host on heroku
+Practice on how to build an API for a machine learning model and host on the web using heroku
 
