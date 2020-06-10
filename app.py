@@ -8,12 +8,14 @@ app = Flask(__name__)
 def main():
     if request.method == 'GET':
         return render_template('index.html')
-    else:
-        review = request.values.getlist('review')
-        review = np.array(review).reshape(1,-1)
+    elif request.method == 'POST':
+        form_input = request.values.getlist('review')
+        form_input = np.array(form_input).astype(np.float64)
+        form_input = np.array(form_input).reshape(1,-1)
         classifier = joblib.load('class.pkl')
-        result = classifier.predict(review)
+        result = classifier.predict(form_input)
         result = result[0]
         return 'The flower classification is ' + result
+
 if __name__ == "__main__":
-    app.run(debug= True)
+    app.run(port = 5000, debug= True)
