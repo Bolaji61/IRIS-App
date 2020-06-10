@@ -9,6 +9,6 @@ Practice on how to build an API for a machine learning model and host on the web
 
 `python app.py`
 
-Open the index.html file, enter the corresponding flower features and click on submit
+Open the index.html file using a browser, enter the corresponding flower features and click on submit
 
 ### Voila
